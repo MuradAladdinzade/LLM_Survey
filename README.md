@@ -102,7 +102,7 @@ to address this issue.
 ####  Positional Encoding
 
 1) Absolute Positional Embeddings: (APE) has been
-used in the original Transformer model to preserve the information of sequence order. Therefore, the positional information
+used in the original Transformer model to preserve the information of sequence order. Therefore, the positional information
 of words is added to the input embeddings at the bottom of
 both the encoder and decoder stacks. There are various options
 for positional encodings, either learned or fixed. In the vanilla
@@ -123,11 +123,11 @@ between input elements. A clipping distance, represented as k
 2 ≤ k ≤ n − 4, specifies the maximum limit on relative locations. This allows the model to make reasonable predictions
 for sequence lengths that are not part of the training data.
 
-3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
+3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
 are short. Moreover, current methods like T5’s positional
 embedding face challenges with constructing a full attention
 matrix between positions. RoPE uses a rotation matrix to
-encode the absolute position of words and simultaneously includes explicit relative position details in self-attention. RoPE
+encode the absolute position of words and simultaneously includes explicit relative position details in self-attention. RoPE
 brings useful features like flexibility with sentence lengths, a
 decrease in word dependency as relative distances increase,
 and the ability to improve linear self-attention with relative
@@ -136,7 +136,7 @@ LLaMA are among models that take advantage of RoPE in
 their architectures.
 4) Relative Positional Bias: The concept behind this type
 of positional embedding is to facilitate extrapolation during
-inference for sequences longer than those encountered in training. In [128] Press et al. proposed Attention with Linear Biases
+inference for sequences longer than those encountered in training. In Press et al. proposed Attention with Linear Biases
 (ALiBi). Instead of simply adding positional embeddings to
 word embeddings, they introduced a bias to the attention scores
 of query-key pairs, imposing a penalty proportional to their
