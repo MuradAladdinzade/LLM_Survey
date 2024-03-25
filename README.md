@@ -156,28 +156,11 @@ approaches used for pre-training like next sentence prediction
 [24], two most common ones include, next token prediction
 (autoregressive language modeling), and masked language
 modeling.
-In Autoregressive Language Modeling framework, given
+*  In Autoregressive Language Modeling framework, given
 a sequence of n tokens x1, ..., xn, the model tries to predict
 next token xn+1 (and sometimes next sequence of tokens) in
-an auto-regressive fashion. One popular loss function in this
-case is the log-likelihood of predicted tokens as shown in Eq
-2
-LALM(x) = X
-N
-i=1
-p(xi+n|xi
-, ..., xi+n−1) (1)
-Given the auto-regressive nature of this framework, the
-decoder-only models are naturally better suited to learn how
-to accomplish these task.
-In Masked Language Modeling, some words are masked
+an auto-regressive fashion. 
+*  In Masked Language Modeling, some words are masked
 in a sequence and the model is trained to predict the masked
 words based on the surrounding context. Sometimes people
-refer to this approach as denoising autoencoding, too. If we
-denote the masked/corrupted samples in the sequence x, as x˜,
-then the training objective of this approach can be written as:
-LMLM(x) = X
-N
-i=1
-p(˜x|x\x˜)
-
+refer to this approach as denoising autoencoding, too. 
