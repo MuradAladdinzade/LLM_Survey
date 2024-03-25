@@ -322,3 +322,8 @@ model.
 
 **What could have been developed further?**
 * Although main models were compared using different benchmarks, variants/fine-tuned models could have also be compared with each other, and results could have be reported to illustrate better fine-tuning processes. 
+
+
+## Resource links
+
+LORA from Scratch: https://lightning.ai/lightning-ai/studios/code-lora-from-scratch
