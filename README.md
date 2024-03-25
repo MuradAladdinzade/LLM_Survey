@@ -23,6 +23,11 @@
 
 
 
+### Large Language Model Families
+
+Large language models (LLMs) mainly refer to transformer-based PLMs that contain tens to hundreds of billions of parameters. Compared to PLMs reviewed above, LLMs are not only much larger in model size, but also exhibit stronger language understanding and generation and emergent abilities that are not present in smaller-scale models.
+
+We have couple of LLM families as illustrated by Figure 8. 
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/351c355a-d411-452a-9f9a-05449541c192)
 
