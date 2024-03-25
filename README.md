@@ -176,3 +176,14 @@ require fine-tuning to be used, they can still benefit from task
 or data-specific fine-tuning. For example, OpenAI reports that
 the much smaller GPT-3.5 Turbo model can outperform GPT-4
 when fine-tuned with task specific data.
+
+#### Alignment
+AI Alignment is the process of steering AI systems towards
+human goals, preferences, and principles. LLMs, pre-trained
+for word prediction, often exhibit unintended behaviors. For
+example, they might generate contents that are toxic, harmful,
+misleading and biased.
+Instruction tuning, discussed above, gets LLMs a step
+closer to being aligned. However, in many cases, it is important
+to include further steps to improve the alignment of the model
+and avoid unintended behaviors
