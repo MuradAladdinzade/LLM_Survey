@@ -190,7 +190,7 @@ and avoid unintended behaviors.
 
 
 #### Decoding Strategies
-Decoding refers to the process of text generation using pretrained LLMs. Given an input prompt, the tokenizer translates
+Decoding refers to the process of text generation using pretrained LLMs. Given an input prompt, the tokenizer translates
 each token in the input text into a corresponding token ID.
 Then, the language model uses these token IDs as input and
 predicts the next most likely token (or a sequence of tokens).
@@ -214,8 +214,7 @@ beams. This procedure is repeated until a predefined maximum sequence length is 
 appears. At this point, the sequence of tokens (AKA “beam”)
 with the highest overall score is chosen as the output. For
 example for beam size of 2 and maximum length of 5,
-the beam search needs to keep track of 2
-5 = 32 possible
+the beam search needs to keep track of 2^5 = 32 possible
 sequences. So it is more computationally intensive than greedy
 search.
 
