@@ -302,6 +302,7 @@ is very useful even if it is used in an API distillation approach.
 * Is it possible to distill the knowledge of
 multiple models into a smaller
 one?
+
 Creating smaller models by this approach yields smaller
 model sizes that can be used even on edge devices. Knowledge
 distillation as shown in Fig 35, illustrates a general setup of
@@ -325,7 +326,7 @@ model.
 **What could have been developed further?**
 * Although main models were compared using different benchmarks, variants/fine-tuned models could have also be compared with each other, and results could have be reported to illustrate better fine-tuning processes. 
 
-## Question 1
+
 
 
 ## Resource links
