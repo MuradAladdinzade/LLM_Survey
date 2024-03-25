@@ -303,7 +303,7 @@ is very useful even if it is used in an API distillation approach.
 multiple models into a smaller
 one?
 <details>
-  <summary>:Click to Show Answer</summary>
+  <summary>Click to Show Answer</summary>
 Yes, it is possible.
 </details>
   
@@ -323,6 +323,18 @@ smaller model to have a similar representation as the teacher
 model.
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/e9e1d276-1152-49cc-a7d0-69613c850810)
+
+## Question 2
+* Which abovementioned stage can be considered the most important for preventing **Hallucinations**?
+  * A) AI Alignment
+  * B) Data Filtering
+  * C) Tokenization
+  * D) Positional Encoding
+<details>
+  <summary>Click to Show Answer</summary>
+A) AI Alignment
+</details>
+
 
 ## Critical Analysis
 **What was overlooked by the authors?**
