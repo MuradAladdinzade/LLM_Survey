@@ -19,6 +19,7 @@
 
 GPT-2 shows that language models are able to learn to perform specific natural language tasks without any explicit supervision when trained on a large WebText dataset consisting of millions of webpages. The GPT-2 model follows the model designs of GPT-1 with a few modifications: Layer normal ization is moved to the input of each sub-block, additional layer normalization is added after the final self-attention block, initialization is modified to account for the accumulation on the residual path and scaling the weights of residual layers, and context size is increased from 512 to 1024 tokens. 
 
+- Encoder-Decoder PLMs: Some example PLMs include MASS (MAsked Sequence to Sequence pre-training) and Text-to-Text Transfer Transformer (T5) model. 
 
 
 
