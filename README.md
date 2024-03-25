@@ -30,6 +30,9 @@ Some LLM families as illustrated below:
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/351c355a-d411-452a-9f9a-05449541c192)
 
+### Problem Statement
+* How LLMs are built and fine-tuned.
+* **Addressed Solution**: All steps of LLMs are well illustrated. 
 
 ## Architeture Overview
 ### HOW LLMS ARE BUILT
