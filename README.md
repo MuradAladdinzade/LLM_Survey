@@ -14,6 +14,9 @@
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/872f7175-f5ca-43bd-878c-83ae58cc690d)
 
+![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/ca850417-50f2-4bd3-9b67-797042569fcb)
+
+
 
 
 
