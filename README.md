@@ -32,7 +32,7 @@ Some LLM families as illustrated below:
 
 ### Problem Statement
 * How LLMs are built and fine-tuned.
-* **Addressed Solution**: All steps of LLMs are well illustrated. 
+* **Addressed Solution**: All steps of building LLMs are well illustrated. 
 
 ## Architeture Overview
 ### HOW LLMS ARE BUILT
