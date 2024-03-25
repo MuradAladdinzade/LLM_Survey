@@ -37,7 +37,8 @@ Some LLM families as illustrated below:
 
 In this section, we first review the popular architectures used for LLMs, and then discuss data and modeling techniques ranging from data preparation, tokenization, to pre-training, instruction tuning, and alignment. Once the model architecture is chosen, the major steps involved in training an LLM includes: data preparation (col lection, cleaning, deduping, etc.), tokenization, model pre training (in a self-supervised learning fashion), instruction tuning, and alignment.
 
-**Dominant LLM architectures are Encoder, Encoder-Decoder, and Decoder. **
+
+\textit{Dominant LLM architectures are Encoder, Encoder-Decoder, and Decoder.}
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/ca850417-50f2-4bd3-9b67-797042569fcb)
 
