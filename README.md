@@ -230,3 +230,68 @@ the time. This approach ensures that we prioritize the most
 probable tokens while introducing an element of randomness
 in the selection process.
 
+ #### Cost-Effective Training/Inference/Adaptation/Compression
+
+Let's review some of the popular approaches
+used for more cost-friendly (and compute-friendly) training
+and usage of LLMs.
+
+1) Low-Rank Adaption (LoRA): Low-Rank Adaptation is
+a popular and lightweight training technique that significantly
+reduces the number of trainable parameters, and is based
+on a crucial insight that the difference between the finetuned weights for a specialized task and the initial pre-trained
+weights often exhibits “low intrinsic rank” - meaning that
+it can be approximated well by a low rank matrix.
+
+Training with LoRA is much faster, memory-efficient, and
+produces smaller model weights (a few hundred MBs), that are
+easier to store and share. One property of low-rank matrices
+is that they can be represented as the product of two smaller
+matrices. This realization leads to the hypothesis that this delta
+between fine-tuned weights and initial pre-trained weights can
+be represented as the matrix product of two much smaller
+matrices. By focusing on updating these two smaller matrices
+rather than the entire original weight matrix, computational
+efficiency can be substantially improved.
+Specifically, for a pre-trained weight matrix W0 ∈ Rd×k
+,
+LoRA constrains its update by representing the latter with
+a low-rank decomposition W0 + ∆W = W0 + BA, where
+B ∈ Rd×r
+, A ∈ Rr×k
+, and the rank r ≪ min(d, k). During
+training, W0 is frozen and does not receive gradient updates,
+while A and B contain trainable parameters. It is worth
+mentioning that both W0 and ∆W = BA are multiplied with
+the same input, and their respective output vectors are summed
+coordinate-wise. For h = W0x, their modified forward pass
+yields: h = W0x + ∆W x = W0x + BAx. Usually a random
+Gaussian initialization is used for A, and zero initialization
+for B, so ∆W = BA is zero at the beginning of training.
+They then scale ∆W x by αr, where α is a constant in r. This
+reparametrization is illustrated below:
+![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/d573a123-b4d1-4fb5-8dbc-abb834db453f)
+
+2) Knowledge Distillation: Knowledge distillation is the
+process of learning from a larger model [143]. Earlier days of
+best-performing models release have proven that this approach
+is very useful even if it is used in an API distillation approach.
+It is also referred to as an approach to distill the knowledge of
+not a single model but in fact multiple models into a smaller
+one. Creating smaller models by this approach yields smaller
+model sizes that can be used even on edge devices. Knowledge
+distillation as shown in Fig 35, illustrates a general setup of
+this training scheme.
+
+Knowledge can be transferred by different forms of learning: response distillation, feature distillation, and API distillation. Response distillation is concerned only with the outputs
+of the teacher model and tries to teach the student model
+how to exactly or at least similarly perform (in the sense of
+prediction) as the teacher. Feature distillation not only uses
+the last layer but also intermediate layers as well to create a
+better inner representation for the student model. This helps the
+smaller model to have a similar representation as the teacher
+model.
+
+![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/e9e1d276-1152-49cc-a7d0-69613c850810)
+
+
