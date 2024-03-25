@@ -90,7 +90,7 @@ tokenizer. It mostly happens in cases where some characters are
 not tokenizable by it. Similar to BytePairEncoding, it tries to
 maximize the likelihood of putting all the tokens in vocabulary
 based on their frequency.
-3) SentencePieceEncoding: Although both tokenizers described before are strong and have many advantages compared
+3) SentencePieceEncoding: Although both tokenizers described before are strong and have many advantages compared
 to white-space tokenization, they still take assumption of
 words being always separated by white-space as granted. This
 assumption is not always true, in fact in some languages, words
