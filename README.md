@@ -101,7 +101,7 @@ to address this issue.
 
 ####  Positional Encoding
 
-Absolute Positional Embeddings: (APE) [44] has been
+1) Absolute Positional Embeddings: (APE) has been
 used in the original Transformer model to preserve the information of sequence order. Therefore, the positional information
 of words is added to the input embeddings at the bottom of
 both the encoder and decoder stacks. There are various options
@@ -110,7 +110,8 @@ Transformer, sine and cosine functions are employed for this
 purpose. The main drawback of using APE in Transformers
 is the restriction to a certain number of tokens. Additionally,
 APE fails to account for the relative distances between tokens.
-2) Relative Positional Embeddings: (RPE) [126] involves
+
+2) Relative Positional Embeddings: (RPE) involves
 extending self-attention to take into account the pairwise links
 between input elements. RPE is added to the model at two
 levels: first as an additional component to the keys, and
@@ -119,9 +120,10 @@ approach looks at the input as a fully-connected graph with
 labels and directed edges. In the case of linear sequences, edges
 can capture information about the relative position differences
 between input elements. A clipping distance, represented as k
-2 ≤ k ≤ n − 4, specifies the maximum limit on relative locations. This allows the model to make reasonable predictions
+2 ≤ k ≤ n − 4, specifies the maximum limit on relative locations. This allows the model to make reasonable predictions
 for sequence lengths that are not part of the training data.
-3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) [127] tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
+
+3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
 are short. Moreover, current methods like T5’s positional
 embedding face challenges with constructing a full attention
 matrix between positions. RoPE uses a rotation matrix to
