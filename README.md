@@ -305,7 +305,7 @@ model sizes that can be used even on edge devices. Knowledge
 distillation as shown in Fig 35, illustrates a general setup of
 this training scheme.
 
-Knowledge can be transferred by different forms of learning: response distillation, feature distillation, and API distillation. Response distillation is concerned only with the outputs
+Knowledge can be transferred by different forms of learning: response distillation, feature distillation, and API distillation. Response distillation is concerned only with the outputs
 of the teacher model and tries to teach the student model
 how to exactly or at least similarly perform (in the sense of
 prediction) as the teacher. Feature distillation not only uses
