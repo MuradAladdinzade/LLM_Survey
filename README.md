@@ -186,4 +186,4 @@ misleading and biased.
 Instruction tuning, discussed above, gets LLMs a step
 closer to being aligned. However, in many cases, it is important
 to include further steps to improve the alignment of the model
-and avoid unintended behaviors
+and avoid unintended behaviors.
