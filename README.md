@@ -38,11 +38,25 @@ Some LLM families as illustrated below:
 In this section, we first review the popular architectures used for LLMs, and then discuss data and modeling techniques ranging from data preparation, tokenization, to pre-training, instruction tuning, and alignment. Once the model architecture is chosen, the major steps involved in training an LLM includes: data preparation (col lection, cleaning, deduping, etc.), tokenization, model pre training (in a self-supervised learning fashion), instruction tuning, and alignment.
 
 
-\textit{Dominant LLM architectures are Encoder, Encoder-Decoder, and Decoder.}
+_Dominant LLM architectures are Encoder, Encoder-Decoder, and Decoder._
+
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/ca850417-50f2-4bd3-9b67-797042569fcb)
 
-
+####  Data Cleaning
+Data quality is crucial to the performance of language models trained on them. Data cleaning techniques such as filtering, deduplication, are shown to have a big impact on
+the model performance.
+  1. Data Filtering: Data filtering aims to enhance the quality of training data and the effectiveness of the trained LLMs.
+  Common data filtering techniques include:
+      * Removing Noise: refers to eliminating irrelevant or noisy data that might impact the model’s ability to generalize well.
+        As an example, one can think of removing false information from the training data, to lower the chance of model generating
+        false responses. Two mainstream approaches for quality filtering includes: classifier-based, and heuristic-based frameworks.
+      *  Handling Outliers: Identifying and handling outliers or anomalies in the data to prevent them from disproportionately influencing the model.
+      *  Addressing Imbalances: Balancing the distribution of classes or categories in the dataset to avoid biases and ensurefair representation. This is specially useful for responsible
+         model training and evaluation.
+      *  Text Preprocessing: Cleaning and standardizing text data by removing stop words, punctuation, or other elements that may not contribute significantly to the model’s learning.
+      *  Dealing with Ambiguities: Resolving or excluding ambiguous or contradictory data that might confuse the model during training. This can help the model to provide more definite and reliable answers.
+ 
 
 
 
