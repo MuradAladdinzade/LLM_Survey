@@ -292,7 +292,7 @@ They then scale ∆W x by αr, where α is a constant in r. This
 reparametrization is illustrated below:
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/d573a123-b4d1-4fb5-8dbc-abb834db453f)
 
-2) Knowledge Distillation: Knowledge distillation is the
+2) **Knowledge Distillation**: Knowledge distillation is the
 process of learning from a larger model. Earlier days of
 best-performing models release have proven that this approach
 is very useful even if it is used in an API distillation approach.
