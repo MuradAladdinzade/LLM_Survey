@@ -298,10 +298,15 @@ process of learning from a larger model. Earlier days of
 best-performing models release have proven that this approach
 is very useful even if it is used in an API distillation approach.
 
-**Question 2**
+**Question 1**
 * Is it possible to distill the knowledge of
 multiple models into a smaller
 one?
+<details>
+  <summary>:arrow_forward: Click to Play/Show Answer</summary>
+
+</details>
+  
 
 Creating smaller models by this approach yields smaller
 model sizes that can be used even on edge devices. Knowledge
