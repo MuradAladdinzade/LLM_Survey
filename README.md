@@ -58,6 +58,45 @@ the model performance.
       *  Dealing with Ambiguities: Resolving or excluding ambiguous or contradictory data that might confuse the model during training. This can help the model to provide more definite and reliable answers.
  
 
+####  Tokenizations
+
+Tokenization referes to the process of converting a sequence of text into smaller parts, known as tokens. While
+the simplest tokenization tool simply chops text into tokens
+based on white space, most tokenization tools rely on a word
+dictionary. However, out-of-vocabulary (OOV) is a problem
+in this case because the tokenizer only knows words in its
+dictionary. To increase the coverage of dictionaries, popular
+tokenizers used for LLMs are based on sub-words, which can
+be combined to form a large number of words, including the
+words unseen in training data or words in different languages.
+In what follows, we describe three popular tokenizers.
+1) BytePairEncoding: BytePairEncoding is originally a
+type of data compression algorithm that uses frequent patterns
+at byte level to compress the data. By definition, this algorithm
+mainly tries to keep the frequent words in their original form
+and break down ones that are not common. This simple
+paradigm keeps the vocabulary not very large, but also good
+enough to represent common words at the same time. Also
+morphological forms of the frequent words can be represented
+very well if suffix or prefix is also commonly presented in the
+training data of the algorithm.
+2) WordPieceEncoding: This algorithm is mainly used for
+very well-known models such as BERT and Electra. At the
+beginning of training, the algorithm takes all the alphabet from
+the training data to make sure that nothing will be left as UNK
+or unknown from the training dataset. This case happens when
+the model is given an input that can not be tokenized by the
+tokenizer. It mostly happens in cases where some characters are
+not tokenizable by it. Similar to BytePairEncoding, it tries to
+maximize the likelihood of putting all the tokens in vocabulary
+based on their frequency.
+3) SentencePieceEncoding: Although both tokenizers described before are strong and have many advantages compared
+to white-space tokenization, they still take assumption of
+words being always separated by white-space as granted. This
+assumption is not always true, in fact in some languages, words
+can be corrupted by many noisy elements such as unwanted
+spaces or even invented words. SentencePieceEncoding tries
+to address this issue.
 
 
 
