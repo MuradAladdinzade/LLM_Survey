@@ -257,24 +257,24 @@ efficiency can be substantially improved.
 **Formal Pseudocode for LORA**
 
 - **Input:**
-  - Initial weight matrix: `W_0 ∈ ℝ^{d × k}`
-  - Vector for input: `x ∈ ℝ^d`
+  - Initial weight matrix: <code>W<sub>0</sub> ∈ ℝ<sup>d × k</sup></code>
+  - Vector for input: <code>x ∈ ℝ<sup>d</sup></code>
 - **Output:**
-  - Modified output vector: `h ∈ ℝ^k`
+  - Modified output vector: <code>h ∈ ℝ<sup>k</sup></code>
 - **Hyperparameters:**
-  - Low rank: `r ∈ ℕ, r ≪ min(d, k)`
-  - Adjustment coefficient: `α ∈ ℝ`
+  - Low rank: <code>r ∈ ℕ, r &ll; min(d, k)</code>
+  - Adjustment coefficient: <code>α ∈ ℝ</code>
 - **Adjustment Parameters:**
-  - Decomposed matrices: `A ∈ ℝ^{r × k}, B ∈ ℝ^{d × r}`
+  - Decomposed matrices: <code>A ∈ ℝ<sup>r × k</sup>, B ∈ ℝ<sup>d × r</sup></code>
 
-1. Begin with zeroed update matrix: `ΔW ← 0_{d × k}`
-2. Iterate from `i = 1` to `r`:
-   - Iterate from `j = 1` to `k`:
-     - Modify `ΔW_{:, j} ← ΔW_{:, j} + B_{:, i} ⋅ A_{i, j}`
-3. Refresh weight matrix: `W ← W_0 + α/r ⋅ ΔW`
-4. Determine final output: `h ← W ⋅ x`
+1. Begin with zeroed update matrix: <code>ΔW &larr; 0<sub>d × k</sub></code>
+2. Iterate from <code>i = 1</code> to <code>r</code>:
+   - Iterate from <code>j = 1</code> to <code>k</code>:
+     - Modify <code>ΔW<sub>:, j</sub> &larr; ΔW<sub>:, j</sub> + B<sub>:, i</sub> ⋅ A<sub>i, j</sub></code>
+3. Refresh weight matrix: <code>W &larr; W<sub>0</sub> + α/r ⋅ ΔW</code>
+4. Determine final output: <code>h &larr; W ⋅ x</code>
 5. **Return** the modified output vector `h`
-
+   
 Specifically, for a pre-trained weight matrix W0 ∈ Rd×k
 ,
 LoRA constrains its update by representing the latter with
