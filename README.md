@@ -123,7 +123,7 @@ between input elements. A clipping distance, represented as k
 2 ≤ k ≤ n − 4, specifies the maximum limit on relative locations. This allows the model to make reasonable predictions
 for sequence lengths that are not part of the training data.
 
-3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
+3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
 are short. Moreover, current methods like T5’s positional
 embedding face challenges with constructing a full attention
 matrix between positions. RoPE uses a rotation matrix to
