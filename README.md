@@ -253,6 +253,26 @@ be represented as the matrix product of two much smaller
 matrices. By focusing on updating these two smaller matrices
 rather than the entire original weight matrix, computational
 efficiency can be substantially improved.
+
+Formal Pseudocode for LORA
+Input:
+Initial weight matrix: $W_0 \in \mathbb{R}^{d \times k}$
+Vector for input: $x \in \mathbb{R}^d$
+Output:
+Modified output vector: $h \in \mathbb{R}^k$
+Hyperparameters:
+Low rank: $r \in \mathbb{N}, r \ll \min(d, k)$
+Adjustment coefficient: $\alpha \in \mathbb{R}$
+Adjustment Parameters:
+Decomposed matrices: $A \in \mathbb{R}^{r \times k}, B \in \mathbb{R}^{d \times r}$
+Begin with zeroed update matrix: $\Delta W \gets 0_{d \times k}$
+Iterate from $i = 1$ to $r$:
+Iterate from $j = 1$ to $k$:
+Modify $\Delta W_{:, j} \gets \Delta W_{:, j} + B_{:, i} \cdot A_{i, j}$
+Refresh weight matrix: $W \gets W_0 + \frac{\alpha}{r}\Delta W$
+Determine final output: $h \gets W \cdot x$
+Return the modified output vector $h$
+
 Specifically, for a pre-trained weight matrix W0 ∈ Rd×k
 ,
 LoRA constrains its update by representing the latter with
