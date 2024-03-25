@@ -32,7 +32,7 @@ Some LLM families as illustrated below:
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/351c355a-d411-452a-9f9a-05449541c192)
 
 
-
+## Architeture Overview
 ### HOW LLMS ARE BUILT
 
 In this section, we first review the popular architectures used for LLMs, and then discuss data and modeling techniques ranging from data preparation, tokenization, to pre-training, instruction tuning, and alignment. Once the model architecture is chosen, the major steps involved in training an LLM includes: data preparation (col lection, cleaning, deduping, etc.), tokenization, model pre training (in a self-supervised learning fashion), instruction tuning, and alignment.
@@ -316,4 +316,5 @@ model.
 
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/e9e1d276-1152-49cc-a7d0-69613c850810)
 
+## Critical Analysis
 
