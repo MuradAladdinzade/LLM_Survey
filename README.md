@@ -327,3 +327,4 @@ model.
 ## Resource links
 
 LORA from Scratch: https://lightning.ai/lightning-ai/studios/code-lora-from-scratch
+Tokenization: https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html
