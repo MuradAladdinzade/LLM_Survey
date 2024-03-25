@@ -295,7 +295,7 @@ reparametrization is illustrated below:
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/d573a123-b4d1-4fb5-8dbc-abb834db453f)
 
 2) Knowledge Distillation: Knowledge distillation is the
-process of learning from a larger model [143]. Earlier days of
+process of learning from a larger model. Earlier days of
 best-performing models release have proven that this approach
 is very useful even if it is used in an API distillation approach.
 It is also referred to as an approach to distill the knowledge of
@@ -317,4 +317,7 @@ model.
 ![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/e9e1d276-1152-49cc-a7d0-69613c850810)
 
 ## Critical Analysis
-
+**What was overlooked by the authors?**
+* One of the drawbacks of the paper is its failure to detail the technical aspects of Knowledge Distillation. While it highlights the method's usefulness in creating smaller, efficient models suitable for edge devices, it lacks a deep dive into the process's technical workings. The author should have included a detailed explanation of how Knowledge Distillation operates from a technical perspective.
+**What could have been developed further?**
+* Although main models were compared using different benchmarks, variants/fine-tuned models could have also be compared with each other, and results could have be reported to illustrate better fine-tuning processes. 
