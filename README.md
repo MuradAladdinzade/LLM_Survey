@@ -60,7 +60,7 @@ the model performance.
 
 ####  Tokenizations
 
-Tokenization referes to the process of converting a sequence of text into smaller parts, known as tokens. While
+Tokenization referes to the process of converting a sequence of text into smaller parts, known as tokens. While
 the simplest tokenization tool simply chops text into tokens
 based on white space, most tokenization tools rely on a word
 dictionary. However, out-of-vocabulary (OOV) is a problem
