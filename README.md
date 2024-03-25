@@ -99,4 +99,43 @@ spaces or even invented words. SentencePieceEncoding tries
 to address this issue.
 
 
+####  Positional Encoding
 
+Absolute Positional Embeddings: (APE) [44] has been
+used in the original Transformer model to preserve the information of sequence order. Therefore, the positional information
+of words is added to the input embeddings at the bottom of
+both the encoder and decoder stacks. There are various options
+for positional encodings, either learned or fixed. In the vanilla
+Transformer, sine and cosine functions are employed for this
+purpose. The main drawback of using APE in Transformers
+is the restriction to a certain number of tokens. Additionally,
+APE fails to account for the relative distances between tokens.
+2) Relative Positional Embeddings: (RPE) [126] involves
+extending self-attention to take into account the pairwise links
+between input elements. RPE is added to the model at two
+levels: first as an additional component to the keys, and
+subsequently as a sub-component of the values matrix. This
+approach looks at the input as a fully-connected graph with
+labels and directed edges. In the case of linear sequences, edges
+can capture information about the relative position differences
+between input elements. A clipping distance, represented as k
+2 ≤ k ≤ n − 4, specifies the maximum limit on relative locations. This allows the model to make reasonable predictions
+for sequence lengths that are not part of the training data.
+3) Rotary Position Embeddings: Rotary Positional Embedding (RoPE) [127] tackles problems with existing approaches. Learned absolute positional encodings can lack generalizability and meaningfulness, particularly when sentences
+are short. Moreover, current methods like T5’s positional
+embedding face challenges with constructing a full attention
+matrix between positions. RoPE uses a rotation matrix to
+encode the absolute position of words and simultaneously includes explicit relative position details in self-attention. RoPE
+brings useful features like flexibility with sentence lengths, a
+decrease in word dependency as relative distances increase,
+and the ability to improve linear self-attention with relative
+position encoding. GPT-NeoX-20B, PaLM, CODEGEN, and
+LLaMA are among models that take advantage of RoPE in
+their architectures.
+4) Relative Positional Bias: The concept behind this type
+of positional embedding is to facilitate extrapolation during
+inference for sequences longer than those encountered in training. In [128] Press et al. proposed Attention with Linear Biases
+(ALiBi). Instead of simply adding positional embeddings to
+word embeddings, they introduced a bias to the attention scores
+of query-key pairs, imposing a penalty proportional to their
+distance. In the BLOOM model, ALiBi is leveraged.
