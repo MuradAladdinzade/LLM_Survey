@@ -173,9 +173,7 @@ useful it needed to be fine-tuned to a specific task with labeled
 data. For
 example, in the original BERT paper, the model was fine-tuned to 11 different tasks. While more recent LLMs no longer
 require fine-tuning to be used, they can still benefit from task
-or data-specific fine-tuning. For example, OpenAI reports that
-the much smaller GPT-3.5 Turbo model can outperform GPT-4
-when fine-tuned with task specific data.
+or data-specific fine-tuning. 
 
 #### Alignment
 AI Alignment is the process of steering AI systems towards
@@ -299,9 +297,12 @@ reparametrization is illustrated below:
 process of learning from a larger model. Earlier days of
 best-performing models release have proven that this approach
 is very useful even if it is used in an API distillation approach.
-It is also referred to as an approach to distill the knowledge of
-not a single model but in fact multiple models into a smaller
-one. Creating smaller models by this approach yields smaller
+
+**Question 2**
+* Is it possible to distill the knowledge of
+multiple models into a smaller
+one?
+Creating smaller models by this approach yields smaller
 model sizes that can be used even on edge devices. Knowledge
 distillation as shown in Fig 35, illustrates a general setup of
 this training scheme.
@@ -323,6 +324,8 @@ model.
 
 **What could have been developed further?**
 * Although main models were compared using different benchmarks, variants/fine-tuned models could have also be compared with each other, and results could have be reported to illustrate better fine-tuning processes. 
+
+## Question 1
 
 
 ## Resource links
