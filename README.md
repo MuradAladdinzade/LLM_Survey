@@ -254,24 +254,26 @@ matrices. By focusing on updating these two smaller matrices
 rather than the entire original weight matrix, computational
 efficiency can be substantially improved.
 
-Formal Pseudocode for LORA
-Input:
-Initial weight matrix: $W_0 \in \mathbb{R}^{d \times k}$
-Vector for input: $x \in \mathbb{R}^d$
-Output:
-Modified output vector: $h \in \mathbb{R}^k$
-Hyperparameters:
-Low rank: $r \in \mathbb{N}, r \ll \min(d, k)$
-Adjustment coefficient: $\alpha \in \mathbb{R}$
-Adjustment Parameters:
-Decomposed matrices: $A \in \mathbb{R}^{r \times k}, B \in \mathbb{R}^{d \times r}$
-Begin with zeroed update matrix: $\Delta W \gets 0_{d \times k}$
-Iterate from $i = 1$ to $r$:
-Iterate from $j = 1$ to $k$:
-Modify $\Delta W_{:, j} \gets \Delta W_{:, j} + B_{:, i} \cdot A_{i, j}$
-Refresh weight matrix: $W \gets W_0 + \frac{\alpha}{r}\Delta W$
-Determine final output: $h \gets W \cdot x$
-Return the modified output vector $h$
+**Formal Pseudocode for LORA**
+
+- **Input:**
+  - Initial weight matrix: `W_0 ∈ ℝ^{d × k}`
+  - Vector for input: `x ∈ ℝ^d`
+- **Output:**
+  - Modified output vector: `h ∈ ℝ^k`
+- **Hyperparameters:**
+  - Low rank: `r ∈ ℕ, r ≪ min(d, k)`
+  - Adjustment coefficient: `α ∈ ℝ`
+- **Adjustment Parameters:**
+  - Decomposed matrices: `A ∈ ℝ^{r × k}, B ∈ ℝ^{d × r}`
+
+1. Begin with zeroed update matrix: `ΔW ← 0_{d × k}`
+2. Iterate from `i = 1` to `r`:
+   - Iterate from `j = 1` to `k`:
+     - Modify `ΔW_{:, j} ← ΔW_{:, j} + B_{:, i} ⋅ A_{i, j}`
+3. Refresh weight matrix: `W ← W_0 + α/r ⋅ ΔW`
+4. Determine final output: `h ← W ⋅ x`
+5. **Return** the modified output vector `h`
 
 Specifically, for a pre-trained weight matrix W0 ∈ Rd×k
 ,
