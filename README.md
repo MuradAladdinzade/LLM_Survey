@@ -239,7 +239,7 @@ and usage of LLMs.
 1) Low-Rank Adaption (LoRA): Low-Rank Adaptation is
 a popular and lightweight training technique that significantly
 reduces the number of trainable parameters, and is based
-on a crucial insight that the difference between the finetuned weights for a specialized task and the initial pre-trained
+on a crucial insight that the difference between the fine-tuned weights for a specialized task and the initial pre-trained
 weights often exhibits “low intrinsic rank” - meaning that
 it can be approximated well by a low rank matrix.
 
