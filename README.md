@@ -303,8 +303,8 @@ is very useful even if it is used in an API distillation approach.
 multiple models into a smaller
 one?
 <details>
-  <summary>:arrow_forward: Click to Show Answer</summary>
-hw=eyafdfsd
+  <summary>:Click to Show Answer</summary>
+Yes, it is possible.
 </details>
   
 
