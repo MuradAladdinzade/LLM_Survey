@@ -50,11 +50,10 @@ the model performance.
       * Removing Noise: refers to eliminating irrelevant or noisy data that might impact the model’s ability to generalize well.
         As an example, one can think of removing false information from the training data, to lower the chance of model generating
         false responses. Two mainstream approaches for quality filtering includes: classifier-based, and heuristic-based frameworks.
-      *  Handling Outliers: Identifying and handling outliers or anomalies in the data to prevent them from disproportionately influencing the model.
       *  Addressing Imbalances: Balancing the distribution of classes or categories in the dataset to avoid biases and ensurefair representation. This is specially useful for responsible
          model training and evaluation.
       *  Text Preprocessing: Cleaning and standardizing text data by removing stop words, punctuation, or other elements that may not contribute significantly to the model’s learning.
-      *  Dealing with Ambiguities: Resolving or excluding ambiguous or contradictory data that might confuse the model during training. This can help the model to provide more definite and reliable answers.
+      answers.
  
 
 ####  Tokenizations
