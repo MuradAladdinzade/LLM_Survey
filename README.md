@@ -326,5 +326,9 @@ model.
 
 ## Resource links
 
-LORA from Scratch: https://lightning.ai/lightning-ai/studios/code-lora-from-scratch
-Tokenization: https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html
+* LORA from Scratch: https://lightning.ai/lightning-ai/studios/code-lora-from-scratch
+* Tokenization: https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html
+* A Comprehensive Overview of Large Language Models: https://arxiv.org/abs/2307.06435
+* Gihub repo for the book: Build a Large Language Model: https://github.com/rasbt/LLMs-from-scratch
+* Impact of Decoding Strategies on Instruction Following: https://deci.ai/blog/llm-evaluation-and-how-decoding-strategies-impact-instruction-following/
+
