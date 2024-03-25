@@ -167,7 +167,7 @@ refer to this approach as denoising autoencoding, too.
 
 
 ####  Fine-tuning and Instruction Tuning
-Early language models such as BERT trained using self-supervision as explained in section III-E were not able to
+Early language models such as BERT trained using self-supervision were not able to
 perform specific tasks. In order for the foundation model to be
 useful it needed to be fine-tuned to a specific task with labeled
 data. For
