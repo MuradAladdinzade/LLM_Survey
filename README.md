@@ -163,4 +163,16 @@ an auto-regressive fashion.
 *  In Masked Language Modeling, some words are masked
 in a sequence and the model is trained to predict the masked
 words based on the surrounding context. Sometimes people
-refer to this approach as denoising autoencoding, too. 
+refer to this approach as denoising autoencoding, too.
+
+
+####  Fine-tuning and Instruction Tuning
+Early language models such as BERT trained using selfsupervision as explained in section III-E were not able to
+perform specific tasks. In order for the foundation model to be
+useful it needed to be fine-tuned to a specific task with labeled
+data. For
+example, in the original BERT paper, the model was finetuned to 11 different tasks. While more recent LLMs no longer
+require fine-tuning to be used, they can still benefit from task
+or data-specific fine-tuning. For example, OpenAI reports that
+the much smaller GPT-3.5 Turbo model can outperform GPT-4
+when fine-tuned with task specific data.
