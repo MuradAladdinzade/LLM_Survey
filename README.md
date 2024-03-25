@@ -141,3 +141,6 @@ inference for sequences longer than those encountered in training. In Press et a
 word embeddings, they introduced a bias to the attention scores
 of query-key pairs, imposing a penalty proportional to their
 distance. In the BLOOM model, ALiBi is leveraged.
+
+![image](https://github.com/MuradAladdinzade/LLM_Survey/assets/142248290/47ffb7b1-f276-4411-8d74-510584763042)
+
