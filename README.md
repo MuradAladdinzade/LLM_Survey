@@ -319,5 +319,6 @@ model.
 ## Critical Analysis
 **What was overlooked by the authors?**
 * One of the drawbacks of the paper is its failure to detail the technical aspects of Knowledge Distillation. While it highlights the method's usefulness in creating smaller, efficient models suitable for edge devices, it lacks a deep dive into the process's technical workings. The author should have included a detailed explanation of how Knowledge Distillation operates from a technical perspective.
+
 **What could have been developed further?**
 * Although main models were compared using different benchmarks, variants/fine-tuned models could have also be compared with each other, and results could have be reported to illustrate better fine-tuning processes. 
