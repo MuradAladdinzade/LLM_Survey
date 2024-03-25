@@ -243,6 +243,7 @@ on a crucial insight that the difference between the fine-tuned weights for a sp
 weights often exhibits “low intrinsic rank” - meaning that
 it can be approximated well by a low rank matrix.
 
+**Key Differences and Advantages of LORA**
 Training with LoRA is much faster, memory-efficient, and
 produces smaller model weights (a few hundred MBs), that are
 easier to store and share. One property of low-rank matrices
@@ -332,3 +333,5 @@ model.
 * Gihub repo for the book: Build a Large Language Model: https://github.com/rasbt/LLMs-from-scratch
 * Impact of Decoding Strategies on Instruction Following: https://deci.ai/blog/llm-evaluation-and-how-decoding-strategies-impact-instruction-following/
 
+## Paper Citation
+Minaee, S., Mikolov, T., Nikzad, N., Chenaghlu, M., Socher, R., Amatriain, X., & Gao, J. (2024). Large language models: A survey. arXiv preprint arXiv:2402.06196. Retrieved from https://arxiv.org/abs/2402.06196
